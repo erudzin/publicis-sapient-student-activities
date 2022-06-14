@@ -1,0 +1,40 @@
+.borderdiv{
+    border-style: solid;
+    border-color: red;
+}
+
+#centerdivs{
+    width: 100%;
+    text-align: center;
+}
+
+#top {
+    margin-bottom: 1%;
+    width: 100%;
+    height: 200px;
+}
+
+#left {
+    float: left;
+    width: 25%;
+    height: 400px;
+}
+
+#right {
+    float: right;
+    width: 25%;
+    height: 400px;
+}
+
+#center {
+    display: inline-block;
+    width: 40%;
+    height: 400px;
+}
+
+
+#bottom {
+    margin-top: 1%;
+    width: 100%;
+    height: 200px;
+}

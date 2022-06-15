@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7 Example 2</title>
+</head>
+<body>
+    <form method = "post" action = "#" name ="login" onsubmit="return handleSubmit()">
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        First Name
+                        <input type = "text" placeholder = "Enter your first name" name = "fn" autocomplete="off">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Last Name
+                        <input type = "text" placeholder = "Enter your last name" name = "ln" autocomplete="off">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Gender</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Male
+                        <input type = "radio" id = "male" name = "gender">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Female
+                        <input type = "radio" id = "female" name = "gender">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Password
+                        <input type = "password"  name = "pass" autocomplete="off">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Confirm Password
+                        <input type = "password"  name = "cpass" autocomplete="off">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Skills</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        C
+                        <input type = "checkbox" id = "c" name = "skill">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        C++
+                        <input type = "checkbox" id = "c++" name = "skill">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Java
+                        <input type = "checkbox" id = "java" name = "skill">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function handleSubmit() {
+            let loginForm = document.login;
+            let firstName = loginForm.fn;
+            if(firstName.value.length < 3){
+                alert("First name less than 3 char");
+            }
+            let lastName = loginForm.ln;
+            if(lastName.value.length < 3){
+                alert("Last name less than 3 char");
+            }
+            let gender = loginForm.gender;
+            if(!gender.value){
+                alert("Gender unchecked");
+            }
+            let pass = loginForm.pass;
+            let cpass = loginForm.cpass;
+            if(pass.value != cpass.value){
+                alert("Passwords don't match")
+            }
+
+            let skill = document.getElementByName("skill");
+            console.log(skill)
+            if(!document.getElementById("c").checked &&
+             !document.getElementById("c++").checked &&
+             !document.getElementById("java").checked
+             ){
+                alert("No skill selected")
+            }
+        }
+    </script>
+</body>
+</html>

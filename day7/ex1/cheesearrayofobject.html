@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Objects</title>
+</head>
+<body>
+    <h1>Array of Objects Example</h1>
+    <script type = "text/javascript">
+        //cheese object
+        function Cheese(name, rating, funFact){
+            this.name = name;
+            this.rating = rating;
+            this.funFact = funFact;
+        }
+        let brie = new Cheese("brie", 8, "one time i ate too much brie and my tummy hurt");
+        let mozz = new Cheese("mozzarella", 6, "makes pizza taste yummy");
+        let bleu = new Cheese("bleu cheese", 2, "smells bad and tastes even worse");
+        let manchego = new Cheese("manchego", 7, "this is that exotic cheese. fire.");
+
+        let cheeses = [brie, mozz, bleu, manchego];
+        for(cheese of cheeses){
+            window.document.write(`<p> Cheese: ${cheese.name} </p>`);
+            window.document.write(`<p> Eric's cheese rating: ${cheese.rating} </p>`);
+            window.document.write(`<p> Eric's cheese fact: ${cheese.funFact} </p></br>`);
+
+        }
+    </script>
+</body>
+</html>

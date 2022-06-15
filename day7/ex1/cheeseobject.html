@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Object Example</h1>
+    <script type = "text/javascript">
+        //cheese object
+        function Cheese(name, rating, funFact){
+            this.name = name;
+            this.rating = rating;
+            this.funFact = funFact;
+        }
+        let brie = new Cheese("brie", 8, "one time i ate too much brie and my tummy hurt");
+        window.document.write(`<p> Cheese of the day: ${brie.name} </p>`);
+        window.document.write(`<p> Eric's cheese rating: ${brie.rating} </p>`);
+        window.document.write(`<p> Eric's cheese fact: ${brie.funFact} </p>`);
+    </script>
+</body>
+</html>
